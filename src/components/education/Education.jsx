@@ -48,7 +48,7 @@ const Education = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="./assets/people.webp" alt="Student icon" />
+          <img src="./people.webp" alt="Student icon" />
           <h1>
             <motion.b whileHover={{ color: "orange", scale: 1.1, transition: { duration: 0.3 } }}>
               Undergraduate
