@@ -1,0 +1,103 @@
+@import "../../app.scss";
+
+.skills {
+  position: relative;
+  padding: 50px 0;
+
+  .header {
+    text-align: center;
+    color: orange;
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; // Allow items to wrap for responsiveness
+    gap: 10px; // Reduced space between items
+    max-width: 1200px;
+    margin: 0 auto; // Center the container
+
+    .skills-section {
+      width: 100%; // Ensure sections take full width
+
+      h2 {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2.5rem;
+        color: white;
+      }
+
+      .skill-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; // Wrap skill cards
+        gap: 10px; // Reduced gap between skill cards
+
+        .skill-card {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          padding: 15px; // Decreased padding for a smaller card
+          text-align: center;
+          flex: 1 1 120px; // Smaller flex basis for compactness
+          max-width: 150px; // Limit maximum width for uniformity
+          transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; // Smooth transition for hover effects
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Reduced shadow for a lighter appearance
+          cursor: pointer; // Indicate interactivity
+
+          &:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); // Stronger shadow on hover
+          }
+
+          &:focus {
+            outline: 2px solid orange; // Clear focus indication
+            outline-offset: 2px;
+          }
+
+          .icon {
+            font-size: 2rem; // Smaller icon size
+            color: orange;
+          }
+
+          h3 {
+            font-size: 1rem; // Smaller font size for names
+            margin: 5px 0;
+            color: white; // Ensuring text color is visible
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@include mobile {
+  .skills {
+    .header {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .container {
+      .skills-section {
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .skill-card {
+          h3 {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
